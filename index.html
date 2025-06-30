@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reambot</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background: #f4f4f4; }
+    #reambot-chat { display: flex; flex-direction: column; gap: 10px; background: white; padding: 20px; max-width: 600px; margin: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    .user-message, .reambot-message { display: flex; align-items: flex-start; gap: 10px; }
+    .bot-avatar { font-size: 24px; }
+    .bubble { background: #e0e0e0; padding: 10px 15px; border-radius: 10px; max-width: 70%; }
+    .user-message .bubble { background: #007bff; color: white; margin-left: auto; }
+    .typing-indicator span { background: #ccc; border-radius: 50%; display: inline-block; width: 8px; height: 8px; margin-right: 4px; animation: blink 1s infinite; }
+    @keyframes blink { 0% { opacity: .2; } 50% { opacity: 1; } 100% { opacity: .2; } }
+  </style>
+</head>
+<body>
+  <div id="reambot-chat">
+    <div id="reambot-messages"></div>
+    <input type="text" id="reambot-text" placeholder="Pose ta question..." />
+    <button id="reambot-send">Envoyer</button>
+  </div>
+  <script src="chat.js"></script>
+</body>
+</html>
